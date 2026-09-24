@@ -189,7 +189,11 @@ class CmdVelBridge(Node):
         m.command = command
         m.param1 = float(p1)
         m.param2 = float(p2)
-        m.target_system = 1
+        # target_system=0 是廣播：不同載具的 MAV_SYS_ID 不一定是 1（例如這台 MAV4
+        # 實際是 4），寫死成特定 ID 會被 Commander 的 target_system 檢查直接忽略。
+        # 每個 UAV 走自己獨立的 /<namespace>/fmu/in/vehicle_command topic，所以廣播
+        # 不會誤發給別的機隻。
+        m.target_system = 0
         m.target_component = 1
         m.source_system = 1
         m.source_component = 1
