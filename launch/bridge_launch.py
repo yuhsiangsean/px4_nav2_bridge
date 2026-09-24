@@ -50,6 +50,9 @@ def generate_launch_description():
     params_file = LaunchConfiguration('params_file')
     target_alt = LaunchConfiguration('target_alt')
     topic_odometry = LaunchConfiguration('topic_odometry')
+    topic_offboard_mode = LaunchConfiguration('topic_offboard_mode')
+    topic_setpoint = LaunchConfiguration('topic_setpoint')
+    topic_command = LaunchConfiguration('topic_command')
     autostart = LaunchConfiguration('autostart')
 
     declare_params_file = DeclareLaunchArgument(
@@ -60,7 +63,16 @@ def generate_launch_description():
         description='cmd_vel_bridge 的飛行高度 [m]')
     declare_topic_odometry = DeclareLaunchArgument(
         'topic_odometry', default_value='/fmu/out/vehicle_odometry',
-        description='PX4 vehicle_odometry topic（訊息版本化時可能要加 _v<N> 後綴）')
+        description='PX4 vehicle_odometry topic（命名空間不同時要覆寫，例如 /MAV4/fmu/out/vehicle_odometry）')
+    declare_topic_offboard_mode = DeclareLaunchArgument(
+        'topic_offboard_mode', default_value='/fmu/in/offboard_control_mode',
+        description='PX4 offboard_control_mode topic')
+    declare_topic_setpoint = DeclareLaunchArgument(
+        'topic_setpoint', default_value='/fmu/in/trajectory_setpoint',
+        description='PX4 trajectory_setpoint topic')
+    declare_topic_command = DeclareLaunchArgument(
+        'topic_command', default_value='/fmu/in/vehicle_command',
+        description='PX4 vehicle_command topic')
     declare_autostart = DeclareLaunchArgument(
         'autostart', default_value='true',
         description='lifecycle_manager 是否自動 configure/activate')
@@ -82,6 +94,9 @@ def generate_launch_description():
         executable='cmd_vel_bridge',
         parameters=[{
             'topic_odometry': topic_odometry,
+            'topic_offboard_mode': topic_offboard_mode,
+            'topic_setpoint': topic_setpoint,
+            'topic_command': topic_command,
             'target_alt': target_alt,
         }],
     )
@@ -153,6 +168,9 @@ def generate_launch_description():
         declare_params_file,
         declare_target_alt,
         declare_topic_odometry,
+        declare_topic_offboard_mode,
+        declare_topic_setpoint,
+        declare_topic_command,
         declare_autostart,
         static_tf_map_odom,
         px4_odom_tf,
