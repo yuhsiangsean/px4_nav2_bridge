@@ -57,9 +57,12 @@ controller_server:
     FollowPath:
       plugin: "nav2_mppi_controller::MPPIController"
       # time_steps * batch_size 是 MPPI 每個控制週期要算的樣本數，原本
-      # 56*2000=112000，RPi 4 撐不住；降到 30*1000=30000，大約省 3.7 倍運算量。
-      time_steps: 30
-      model_dt: 0.05
+      # 56*2000=112000，RPi 4 撐不住；降到 20*1000=20000，大約省 5.6 倍運算量。
+      # model_dt 必須 >= 控制週期（1/controller_frequency），這裡 controller_frequency
+      # 降成 10Hz，model_dt 也要跟著調成 0.1，不然 MPPI 在 configure 階段會直接丟
+      # exception（"Controller period more then model dt"）讓 controller_server 起不來。
+      time_steps: 20
+      model_dt: 0.1
       batch_size: 1000
       ax_max: 1.0
       ax_min: -1.0
