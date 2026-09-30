@@ -10,7 +10,7 @@ bt_navigator:
     robot_base_frame: base_link
     odom_topic: /odom
     bt_loop_duration: 10
-    default_server_timeout: 20
+    default_server_timeout: 100
     wait_for_service_timeout: 1000
     action_server_result_timeout: 900.0
     navigators: ["navigate_to_pose", "navigate_through_poses"]
@@ -61,9 +61,9 @@ controller_server:
       # model_dt 必須 >= 控制週期（1/controller_frequency），這裡 controller_frequency
       # 降成 10Hz，model_dt 也要跟著調成 0.1，不然 MPPI 在 configure 階段會直接丟
       # exception（"Controller period more then model dt"）讓 controller_server 起不來。
-      time_steps: 20
+      time_steps: 15
       model_dt: 0.1
-      batch_size: 1000
+      batch_size: 500
       ax_max: 1.0
       ax_min: -1.0
       ay_max: 1.0
