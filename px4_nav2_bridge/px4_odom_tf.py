@@ -8,8 +8,6 @@ PX4 vehicle_odometry -> Nav2 需要的 TF(odom -> base_link) 與 /odom.
     本節點做反轉換：map.x = n, map.y = -e, map.z = -d, yaw_map = -yaw_ned
 - 時間戳用 ROS 系統時間（全部節點都用 use_sim_time:=false）
 """
-import math
-
 from geometry_msgs.msg import TransformStamped
 from nav_msgs.msg import Odometry
 from px4_msgs.msg import VehicleOdometry
@@ -33,20 +31,19 @@ class Px4OdomTf(Node):
 
     def cb(self, m: VehicleOdometry):
         n, e, d = m.position
-        w, qx, qy, qz = m.q
-        yaw_ned = math.atan2(2.0 * (w * qz + qx * qy), 1.0 - 2.0 * (qy * qy + qz * qz))
-        yaw = -yaw_ned
-        cz, sz = math.cos(yaw / 2.0), math.sin(yaw / 2.0)
-        c, s = math.cos(yaw), math.sin(yaw)
 
-        # 速度轉到機體 FLU
+        # orientation 暫時固定成 identity（yaw=0）：mocap rigid body 的本地軸定義
+        # 目前有問題（實測水平轉機頭，Motive 顯示變化的是 roll 不是 yaw），q 算出來
+        # 的 yaw 不可信。Nav2 的 costmap/MPPI critics 是直接讀這個節點發的 TF/odom
+        # orientation 判斷「目前朝向」，只在 cmd_vel_bridge.py 那邊跳過旋轉不夠—
+        # 這裡也要固定成identity，兩邊假設才會一致（機體座標=世界座標）。等 Motive
+        # 那邊的 rigid body 軸定義校正後，要把這裡跟 cmd_vel_bridge.py 一起改回來。
+        cz, sz = 1.0, 0.0
+
+        # 機體座標=世界座標（跟上面 orientation 固定 identity 的假設一致），
+        # 不需要再用 yaw 旋轉一次。
         v0, v1 = m.velocity[0], m.velocity[1]
-        if m.velocity_frame == VehicleOdometry.VELOCITY_FRAME_BODY_FRD:
-            bx, by = v0, -v1
-        else:  # NED 世界座標 -> map -> 機體
-            vx, vy = v0, -v1
-            bx = c * vx + s * vy
-            by = -s * vx + c * vy
+        bx, by = v0, -v1
         wz = -m.angular_velocity[2]
 
         stamp = self.get_clock().now().to_msg()
