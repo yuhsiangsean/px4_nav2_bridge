@@ -45,10 +45,10 @@ class CmdVelBridge(Node):
         self.declare_parameter('cmd_timeout', 0.5)        # [s] 沒收到 cmd_vel 就懸停
         self.declare_parameter('odom_timeout', 0.3)       # [s] 沒收到 odometry 就懸停
         # geofence，map 座標 [m]（map = OptiTrack 世界座標：X 前、Y 左、Z 上）
-        self.declare_parameter('fence_x_min', -2.0)
-        self.declare_parameter('fence_x_max', 2.0)
-        self.declare_parameter('fence_y_min', -2.0)
-        self.declare_parameter('fence_y_max', 2.0)
+        self.declare_parameter('fence_x_min', -6.0)
+        self.declare_parameter('fence_x_max', 6.0)
+        self.declare_parameter('fence_y_min', -6.0)
+        self.declare_parameter('fence_y_max', 6.0)
 
         def p(n):
             return self.get_parameter(n).value
