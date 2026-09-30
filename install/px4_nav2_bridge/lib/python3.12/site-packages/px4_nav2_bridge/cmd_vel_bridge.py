@@ -158,12 +158,10 @@ class CmdVelBridge(Node):
         n = math.hypot(vx_b, vy_b)
         if n > self.max_xy:
             vx_b, vy_b = vx_b * self.max_xy / n, vy_b * self.max_xy / n
-        # 機體 FRD -> 世界 NED：暫時跳過用 yaw 旋轉這步，直接把機體座標當世界座標。
-        # mocap rigid body 的本地軸定義目前有問題（實測：水平轉機頭，Motive 顯示變化
-        # 的是 roll 不是 yaw），self.yaw_ned 這個回授不可信，先關掉旋轉排除它的干擾，
-        # 跟 nav2_test 專案一樣不依賴 yaw，驗證 Nav2 的路徑/控制邏輯本身對不對；等
-        # Motive 那邊的 rigid body 軸定義校正後，要記得把這段旋轉邏輯改回來。
-        vn, ve = vx_b, vy_b
+        # 機體 FRD -> 世界 NED（用 yaw 旋轉）
+        c, s = math.cos(self.yaw_ned), math.sin(self.yaw_ned)
+        vn = c * vx_b - s * vy_b
+        ve = s * vx_b + c * vy_b
         # FLU 的逆時針為正 -> FRD/NED 的順時針為正
         yaw_rate = max(-self.max_yaw_rate, min(self.max_yaw_rate, -tw.angular.z))
         return vn, ve, yaw_rate

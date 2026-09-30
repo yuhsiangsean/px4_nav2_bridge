@@ -1,0 +1,53 @@
+[0.231s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'test', '--packages-select', 'px4_nav2_bridge']
+[0.231s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='test', build_base='build', install_base='install', merge_install=False, test_result_base=None, retest_until_fail=0, retest_until_pass=0, abort_on_error=False, return_code_on_test_failure=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['px4_nav2_bridge'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], ctest_args=None, python_testing=None, pytest_args=None, pytest_with_coverage=False, unittest_args=None, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x741cad490fe0>, verb_extension=<colcon_core.verb.test.TestVerb object at 0x741cad45ffb0>, main=<bound method TestVerb.main of <colcon_core.verb.test.TestVerb object at 0x741cad45ffb0>>)
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.259s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.259s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/ros2_ws/src/px4_nav2_bridge'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.278s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_python' and name 'px4_nav2_bridge'
+[0.278s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.278s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.278s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.278s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.278s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'px4_nav2_bridge' test argument 'ctest_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'px4_nav2_bridge' test argument 'python_testing' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'px4_nav2_bridge' test argument 'pytest_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'px4_nav2_bridge' test argument 'pytest_with_coverage' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'px4_nav2_bridge' test argument 'unittest_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'px4_nav2_bridge' test argument 'retest_until_pass' from command line to '0'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'px4_nav2_bridge' test argument 'retest_until_fail' from command line to '0'
+[0.280s] DEBUG:colcon.colcon_core.verb.test:Testing package 'px4_nav2_bridge' with the following arguments: {'build_base': '/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge', 'ctest_args': None, 'install_base': '/root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge', 'path': '/root/ros2_ws/src/px4_nav2_bridge', 'pytest_args': None, 'pytest_with_coverage': False, 'python_testing': None, 'retest_until_fail': 0, 'retest_until_pass': 0, 'test_result_base': None, 'unittest_args': None}
+[0.280s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.281s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.281s] INFO:colcon.colcon_ros.task.ament_python.test:Testing ROS package in '/root/ros2_ws/src/px4_nav2_bridge' with build type'ament_python'
+[0.281s] INFO:colcon.colcon_core.task.python.test:Testing Python package in '/root/ros2_ws/src/px4_nav2_bridge'
+[0.283s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.283s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.283s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.472s] Level 1:colcon.colcon_core.task.python.test:test() by extension 'pytest'
+[0.473s] Level 1:colcon.colcon_core.task.python.test:test.step() by extension 'pytest'
+[0.475s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/ros2_ws/src/px4_nav2_bridge': PYTEST_ADDOPTS=--tb=short --junit-xml=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/pytest.xml --junit-prefix=px4_nav2_bridge -o cache_dir=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[1.152s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.152s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.152s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.152s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.152s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/ros2_ws/src/px4_nav2_bridge' returned '0': PYTEST_ADDOPTS=--tb=short --junit-xml=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/pytest.xml --junit-prefix=px4_nav2_bridge -o cache_dir=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[1.181s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.181s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.181s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.181s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.182s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[1.182s] DEBUG:colcon.colcon_core.event_reactor:joined thread

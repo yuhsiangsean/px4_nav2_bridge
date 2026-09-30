@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+cachedir: build/px4_nav2_bridge/.pytest_cache
+rootdir: /root/ros2_ws/src/px4_nav2_bridge
+plugins: launch-testing-3.4.11, ament-lint-0.17.5, ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, cov-4.1.0, typeguard-4.1.5, colcon-core-0.21.0
+collected 3 items
+
+test/test_copyright.py s                                                 [ 33%]
+test/test_flake8.py .                                                    [ 66%]
+test/test_pep257.py .                                                    [100%]
+
+- generated xml file: /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/pytest.xml -
+========================= 2 passed, 1 skipped in 0.31s =========================

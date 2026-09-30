@@ -1,0 +1,3 @@
+[console_scripts]
+cmd_vel_bridge = px4_nav2_bridge.cmd_vel_bridge:main
+px4_odom_tf = px4_nav2_bridge.px4_odom_tf:main

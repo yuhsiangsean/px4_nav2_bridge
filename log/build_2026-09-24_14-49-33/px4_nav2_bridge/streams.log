@@ -1,0 +1,23 @@
+[0.617s] Invoking command in '/root/ros2_ws/src/px4_nav2_bridge': PYTHONPATH=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/px4_nav2_bridge build --build-base /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build install --record /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/install.log --install-scripts $base/lib/px4_nav2_bridge --single-version-externally-managed install_data
+[0.765s] running egg_info
+[0.777s] writing build/px4_nav2_bridge/px4_nav2_bridge.egg-info/PKG-INFO
+[0.779s] writing dependency_links to build/px4_nav2_bridge/px4_nav2_bridge.egg-info/dependency_links.txt
+[0.780s] writing entry points to build/px4_nav2_bridge/px4_nav2_bridge.egg-info/entry_points.txt
+[0.780s] writing requirements to build/px4_nav2_bridge/px4_nav2_bridge.egg-info/requires.txt
+[0.780s] writing top-level names to build/px4_nav2_bridge/px4_nav2_bridge.egg-info/top_level.txt
+[0.806s] reading manifest file 'build/px4_nav2_bridge/px4_nav2_bridge.egg-info/SOURCES.txt'
+[0.807s] writing manifest file 'build/px4_nav2_bridge/px4_nav2_bridge.egg-info/SOURCES.txt'
+[0.808s] running build
+[0.808s] running build_py
+[0.808s] running install
+[0.813s] running install_lib
+[0.824s] running install_data
+[0.824s] copying config/nav2_params.yaml -> /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/px4_nav2_bridge/config
+[0.825s] running install_egg_info
+[0.836s] removing '/root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge-0.0.0-py3.12.egg-info' (and everything under it)
+[0.836s] Copying build/px4_nav2_bridge/px4_nav2_bridge.egg-info to /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge-0.0.0-py3.12.egg-info
+[0.838s] running install_scripts
+[0.917s] Installing cmd_vel_bridge script to /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/px4_nav2_bridge
+[0.917s] Installing px4_odom_tf script to /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/px4_nav2_bridge
+[0.918s] writing list of installed files to '/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/install.log'
+[0.933s] Invoked command in '/root/ros2_ws/src/px4_nav2_bridge' returned '0': PYTHONPATH=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/px4_nav2_bridge build --build-base /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build install --record /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/install.log --install-scripts $base/lib/px4_nav2_bridge --single-version-externally-managed install_data

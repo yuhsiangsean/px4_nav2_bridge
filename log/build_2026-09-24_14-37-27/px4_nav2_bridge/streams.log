@@ -1,0 +1,45 @@
+[0.696s] Invoking command in '/root/ros2_ws/src/px4_nav2_bridge': PYTHONPATH=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/px4_nav2_bridge build --build-base /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build install --record /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/install.log --install-scripts $base/lib/px4_nav2_bridge --single-version-externally-managed install_data
+[0.850s] running egg_info
+[0.850s] creating build/px4_nav2_bridge/px4_nav2_bridge.egg-info
+[0.861s] writing build/px4_nav2_bridge/px4_nav2_bridge.egg-info/PKG-INFO
+[0.862s] writing dependency_links to build/px4_nav2_bridge/px4_nav2_bridge.egg-info/dependency_links.txt
+[0.862s] writing entry points to build/px4_nav2_bridge/px4_nav2_bridge.egg-info/entry_points.txt
+[0.862s] writing requirements to build/px4_nav2_bridge/px4_nav2_bridge.egg-info/requires.txt
+[0.862s] writing top-level names to build/px4_nav2_bridge/px4_nav2_bridge.egg-info/top_level.txt
+[0.863s] writing manifest file 'build/px4_nav2_bridge/px4_nav2_bridge.egg-info/SOURCES.txt'
+[0.886s] reading manifest file 'build/px4_nav2_bridge/px4_nav2_bridge.egg-info/SOURCES.txt'
+[0.886s] writing manifest file 'build/px4_nav2_bridge/px4_nav2_bridge.egg-info/SOURCES.txt'
+[0.886s] running build
+[0.886s] running build_py
+[0.887s] creating /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build
+[0.887s] creating /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build/lib
+[0.887s] creating /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build/lib/px4_nav2_bridge
+[0.888s] copying px4_nav2_bridge/cmd_vel_bridge.py -> /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build/lib/px4_nav2_bridge
+[0.888s] copying px4_nav2_bridge/__init__.py -> /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build/lib/px4_nav2_bridge
+[0.888s] copying px4_nav2_bridge/px4_odom_tf.py -> /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build/lib/px4_nav2_bridge
+[0.889s] running install
+[0.893s] running install_lib
+[0.905s] creating /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge
+[0.905s] copying /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build/lib/px4_nav2_bridge/cmd_vel_bridge.py -> /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge
+[0.906s] copying /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build/lib/px4_nav2_bridge/__init__.py -> /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge
+[0.906s] copying /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build/lib/px4_nav2_bridge/px4_odom_tf.py -> /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge
+[0.906s] byte-compiling /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge/cmd_vel_bridge.py to cmd_vel_bridge.cpython-312.pyc
+[0.908s] byte-compiling /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge/__init__.py to __init__.cpython-312.pyc
+[0.908s] byte-compiling /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge/px4_odom_tf.py to px4_odom_tf.cpython-312.pyc
+[0.909s] running install_data
+[0.909s] creating /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/ament_index
+[0.909s] creating /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/ament_index/resource_index
+[0.909s] creating /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/ament_index/resource_index/packages
+[0.910s] copying resource/px4_nav2_bridge -> /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/ament_index/resource_index/packages
+[0.910s] copying package.xml -> /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/px4_nav2_bridge
+[0.910s] creating /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/px4_nav2_bridge/launch
+[0.910s] copying launch/bridge_launch.py -> /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/px4_nav2_bridge/launch
+[0.911s] creating /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/px4_nav2_bridge/config
+[0.911s] copying config/nav2_params.yaml -> /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/share/px4_nav2_bridge/config
+[0.911s] running install_egg_info
+[0.925s] Copying build/px4_nav2_bridge/px4_nav2_bridge.egg-info to /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages/px4_nav2_bridge-0.0.0-py3.12.egg-info
+[0.927s] running install_scripts
+[1.009s] Installing cmd_vel_bridge script to /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/px4_nav2_bridge
+[1.009s] Installing px4_odom_tf script to /root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/px4_nav2_bridge
+[1.010s] writing list of installed files to '/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/install.log'
+[1.027s] Invoked command in '/root/ros2_ws/src/px4_nav2_bridge' returned '0': PYTHONPATH=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/px4_nav2_bridge/install/px4_nav2_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/px4_nav2_bridge build --build-base /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/build install --record /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/install.log --install-scripts $base/lib/px4_nav2_bridge --single-version-externally-managed install_data

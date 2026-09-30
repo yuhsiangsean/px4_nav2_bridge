@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: px4-nav2-bridge
+Version: 0.0.0
+Summary: Nav2 to PX4 Offboard bridge for indoor (no-GPS) minimal SITL navigation testing
+Maintainer: root
+Maintainer-email: a0929370607@gmail.com
+License: TODO: License declaration
+Provides-Extra: test

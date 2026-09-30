@@ -1,0 +1,15 @@
+[0.284s] Invoking command in '/root/ros2_ws/src/px4_nav2_bridge': PYTEST_ADDOPTS=--tb=short --junit-xml=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/pytest.xml --junit-prefix=px4_nav2_bridge -o cache_dir=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[0.651s] ============================= test session starts ==============================
+[0.651s] platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+[0.651s] cachedir: build/px4_nav2_bridge/.pytest_cache
+[0.651s] rootdir: /root/ros2_ws/src/px4_nav2_bridge
+[0.651s] plugins: launch-testing-3.4.11, ament-lint-0.17.5, ament-copyright-0.17.5, launch-testing-ros-0.26.12, ament-pep257-0.17.5, ament-xmllint-0.17.5, ament-flake8-0.17.5, cov-4.1.0, typeguard-4.1.5, colcon-core-0.21.0
+[0.651s] collected 3 items
+[0.651s] 
+[0.654s] test/test_copyright.py s                                                 [ 33%]
+[0.814s] test/test_flake8.py .                                                    [ 66%]
+[0.885s] test/test_pep257.py .                                                    [100%]
+[0.885s] 
+[0.885s] - generated xml file: /root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/pytest.xml -
+[0.885s] ========================= 2 passed, 1 skipped in 0.31s =========================
+[0.924s] Invoked command in '/root/ros2_ws/src/px4_nav2_bridge' returned '0': PYTEST_ADDOPTS=--tb=short --junit-xml=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/pytest.xml --junit-prefix=px4_nav2_bridge -o cache_dir=/root/ros2_ws/src/px4_nav2_bridge/build/px4_nav2_bridge/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
