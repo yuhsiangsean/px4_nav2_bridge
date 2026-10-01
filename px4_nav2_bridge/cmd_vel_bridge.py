@@ -42,6 +42,9 @@ class CmdVelBridge(Node):
         self.declare_parameter('target_alt', 1.0)         # 飛行高度 [m]，向上為正
         self.declare_parameter('max_xy_vel', 0.3)         # [m/s]
         self.declare_parameter('max_yaw_rate', 0.5)       # [rad/s]
+        # 是否把 Nav2 的 angular.z（轉機頭）轉給 PX4。mocap 的 yaw 不可信、
+        # px4_odom_tf 把朝向固定成 0，Nav2 看不到機頭有沒有轉，轉了只會一直自旋。
+        self.declare_parameter('enable_yaw', False)
         self.declare_parameter('cmd_timeout', 0.5)        # [s] 沒收到 cmd_vel 就懸停
         self.declare_parameter('odom_timeout', 0.3)       # [s] 沒收到 odometry 就懸停
         # geofence，map 座標 [m]（map = OptiTrack 世界座標：X 前、Y 左、Z 上）
@@ -56,6 +59,7 @@ class CmdVelBridge(Node):
         self.target_alt = p('target_alt')
         self.max_xy = p('max_xy_vel')
         self.max_yaw_rate = p('max_yaw_rate')
+        self.enable_yaw = p('enable_yaw')
         self.cmd_timeout = p('cmd_timeout')
         self.odom_timeout = p('odom_timeout')
         self.fence = (p('fence_x_min'), p('fence_x_max'), p('fence_y_min'), p('fence_y_max'))
@@ -165,7 +169,10 @@ class CmdVelBridge(Node):
         # Motive 那邊的 rigid body 軸定義校正後，要記得把這段旋轉邏輯改回來。
         vn, ve = vx_b, vy_b
         # FLU 的逆時針為正 -> FRD/NED 的順時針為正
-        yaw_rate = max(-self.max_yaw_rate, min(self.max_yaw_rate, -tw.angular.z))
+        if self.enable_yaw:
+            yaw_rate = max(-self.max_yaw_rate, min(self.max_yaw_rate, -tw.angular.z))
+        else:
+            yaw_rate = 0.0
         return vn, ve, yaw_rate
 
     def apply_fence(self, vn, ve):

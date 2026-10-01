@@ -53,7 +53,7 @@ controller_server:
       stateful: True
       plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.15
-      yaw_goal_tolerance: 0.5
+      yaw_goal_tolerance: 3.15
     FollowPath:
       plugin: "nav2_mppi_controller::MPPIController"
       # time_steps * batch_size 是 MPPI 每個控制週期要算的樣本數，原本
@@ -102,7 +102,7 @@ controller_server:
         cost_weight: 5.0
         threshold_to_consider: 1.4
       GoalAngleCritic:
-        enabled: true
+        enabled: false
         cost_power: 1
         cost_weight: 3.0
         threshold_to_consider: 0.5
@@ -137,7 +137,7 @@ controller_server:
         offset_from_furthest: 5
         threshold_to_consider: 1.4
       PathAngleCritic:
-        enabled: true
+        enabled: false
         cost_power: 1
         cost_weight: 2.0
         offset_from_furthest: 4
